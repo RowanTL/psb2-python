@@ -5,11 +5,15 @@ A Python library for fetching and sampling training and test data for experiment
 
 ## Installation
 
-Easily installed using `pip`:
+To run this, run `python psb2/psb2.py`. This will download all of the problems to a folder in the
+psb format. Modify the code under the `if __name__ == "__main__"` line if only certain sets or a
+different format is desired.
 
-```text
-pip install psb2
-```
+This fork is not meant to be installed. It is meant to be ran as a standalone script with all of the
+libraries already installed.
+
+Done due to use with nixos and as a git submodule, stopping the need to initialize a brand new package
+manager in rush.
 
 ## Usage
 
