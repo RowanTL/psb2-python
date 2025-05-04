@@ -7,6 +7,8 @@ import json
 import random
 import requests
 import itertools
+import sys
+from pathlib import Path
 
 def objects2lines(objects):
     lines = []
@@ -177,4 +179,13 @@ def get_problem_names():
     return PROBLEMS
 
 if __name__ == "__main__":
-    print("hello")
+    if Path.cwd().name != "rush":
+        print("This script is not ran in the root folder of rush, do you want to continue with the download process? (y/n): ")
+        user_input = input()
+        if user_input != "y":
+            sys.exit()
+
+    for problem in PROBLEMS:
+        temp_path = Path("psb2/")
+        print(f"downloading {problem}")
+        fetch_examples(str(temp_path), problem, 200, 2000)
