@@ -125,3 +125,6 @@ def fetch_examples(datasets_directory, problem_name, n_train, n_test, format='ps
 def get_problem_names():
     """Returns a list of strings of the problem names in PSB2."""
     return PROBLEMS
+
+if __name__ == "__main__":
+    print("hello")
